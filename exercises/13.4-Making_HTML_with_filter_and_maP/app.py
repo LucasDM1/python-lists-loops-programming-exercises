@@ -10,3 +10,16 @@ all_colors = [
 
 #Your code go here:
 
+def filter_colors(color):
+    if (color["sexy"]== True):
+        return (color)
+
+def generate_li(color):
+    return ("<li>"+color["label"]+"</li>")
+
+colors=list(filter(filter_colors, all_colors))
+
+htmlcol=list(map(generate_li, colors))
+str1=''
+str1=str1.join(htmlcol)
+print(str1)
